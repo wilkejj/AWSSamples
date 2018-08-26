@@ -1,17 +1,16 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Resources:
-    UserTable:
+    SmartGroupConfigurations:
       Type: "AWS::DynamoDB::Table"
       Properties:
-        TableName: "SmartGroupConfigurations"
         AttributeDefinitions:
-        - AttributeName: jssId
-          AttributeType: S
+        -
+          AttributeName: "jssId"
+          AttributeType: "S"
         KeySchema:
-        - AttributeName: jssId
-          KeyType: HASH
-        - AttributeName: groupId
-          AttributeType: S
+        -
+          AttributeName: "jssId"
+          KeyType: "HASH"
         ProvisionedThroughput:
-          ReadCapacityUnits: 1
-          WriteCapacityUnits: 1
+          ReadCapacityUnits: "1"
+          WriteCapacityUnits: "1"
